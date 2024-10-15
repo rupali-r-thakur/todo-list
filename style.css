@@ -1,0 +1,36 @@
+*{margin: 0; padding: 0; box-sizing: border-box ;}
+:root{
+    --background:#000430; --secondaryBackground:#171c48; --text:#fff; --purple:#828dff; --teal:#24feee;
+}
+body{
+    background-color: var(--background); color: var( --text); display: flex; align-items: center; justify-content: space-around;
+}
+.container{
+    display: flex; flex-direction: column; align-items: center; justify-content: center;  width: 600px; margin-top: 120px auto 0 auto;
+}
+form{ margin-top: 60px; width: 100%; display: flex; gap: 10px;}
+input{
+    flex: 1; background: var(--secondaryBackground); border: 1px solid var(--purple); border-radius: 10px; outline: none; color:var(--text) ;
+}
+button {
+    padding: 15px;  height: 50px; width: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--purple) 0%, var(--teal) 100%); 
+    color: var(--text); font-size: 24px; font-weight: bold; outline: none; border: none; cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+button:hover {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--purple) 100%);  transform: scale(1.05);  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+button:active { background: var(--purple);  transform: scale(0.95); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+ul.task-list { list-style-type: none; padding: 0; width: 100%;}
+.taskItem {
+    display: flex; align-items: center; justify-content: space-between; padding: 10px; margin-top: 20px;
+    background: var(--secondaryBackground); border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.task { display: flex; align-items: center; color: var(--text);}
+.task p { margin-left: 10px; font-size: 20px;}
+.checkbox { accent-color: var(--purple);}
+.task.completed p { text-decoration: line-through; color:  var(--teal);}
+.icons { display: flex; align-items: center;}
+.icons img { width: 24px; height: 24px; margin-left: 10px; cursor: pointer; transition: opacity 0.3s ease;}
+.icons img:hover { opacity: 0.7;}
